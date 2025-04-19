@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🍁",
+      "☺"
+    ],
+    "recentlyUsedIconsSize": 20,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "custom",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Chapter-2/Chapter-2-Introduction.md": "🍁",
+  "Chapter-2/Chapter-2-Item-1-Consider-static-factory-methods-instead-of-constructors.md": "🍁",
+  "Chapter-2/Chapter-2-Item-2-Consider-a-builder-when-faced-with-many-constructor-parameters.md": "🍁",
+  "Chapter-2/Chapter-2-Item-3-Enforce-the-singleton-property-with-a-private-constructor-or-an-enum-type.md": "🍁",
+  "Chapter-2/Chapter-2-Item-4-Enforce-noninstantiability-with-a-private-constructor.md": "🍁",
+  "Chapter-2/Chapter-2-Item-5-Prefer-dependency-injection-to-hardwiring-resources.md": "🍁",
+  "Chapter-2/Chapter-2-Item-6-Avoid-creating-unnecessary-objects.md": "🍁",
+  "Chapter-2/Chapter-2-Item-7-Eliminate-obsolete-object-references.md": "🍁",
+  "Chapter-2/Chapter-2-Item-8-Avoid-finalizers-and-cleaners.md": "🍁",
+  "Chapter-2/Chapter-2-Item-9-Prefer-try-with-resources-to-try-finally.md": "🍁",
+  "Chapter-3/Chapter-3-Introduction.md": "🍁",
+  "Chapter-10/Chapter-10-Item-69-Use-exceptions-only-for-exceptional-conditions.md": "🍁",
+  "Chapter-10/Chapter-10-Introduction.md": "🍁"
+}

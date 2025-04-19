@@ -16,7 +16,7 @@ Such utility classes were not designed to be instantiated: an instance would be 
 
 **试图通过使类抽象来实施不可实例化是行不通的。** 可以对类进行子类化，并实例化子类。此外，它误导用户认为类是为继承而设计的（[Item-19](/Chapter-4/Chapter-4-Item-19-Design-and-document-for-inheritance-or-else-prohibit-it.md)）。然而，有一个简单的习惯用法来确保不可实例化。只有当类不包含显式构造函数时，才会生成默认构造函数，因此**可以通过包含私有构造函数使类不可实例化：**
 
-```
+```java
 // Noninstantiable utility class
 public class UtilityClass {
     // Suppress default constructor for noninstantiability
@@ -38,3 +38,125 @@ As a side effect, this idiom also prevents the class from being subclassed. All 
 **[Back to contents of the chapter（返回章节目录）](/Chapter-2/Chapter-2-Introduction.md)**
 - **Previous Item（上一条目）：[Item 3: Enforce the singleton property with a private constructor or an enum type（使用私有构造函数或枚举类型实施单例属性）](/Chapter-2/Chapter-2-Item-3-Enforce-the-singleton-property-with-a-private-constructor-or-an-enum-type.md)**
 - **Next Item（下一条目）：[Item 5: Prefer dependency injection to hardwiring resources（依赖注入优于硬连接资源）](/Chapter-2/Chapter-2-Item-5-Prefer-dependency-injection-to-hardwiring-resources.md)**
+
+
+
+### 扩展-类不需要实例化的场景
+
+在 Java 中，如果一个类**不需要被实例化**（即不允许创建该类的对象），可以通过将其设计为**不可实例化**的类。以下是需要这种能力的典型场景及实现方法：
+
+---
+
+#### **1. 工具类（Utility Class）**
+**场景**：类仅包含静态方法或静态常量，无需实例化即可使用。  
+**示例**：`Math`、`Collections`、`Arrays` 等工具类。  
+**实现**：私有化构造方法，禁止通过 `new` 创建对象。  
+```java
+public final class StringUtils {
+    // 私有构造方法，防止实例化
+    private StringUtils() {
+        throw new AssertionError("工具类不可实例化");
+    }
+
+    public static boolean isEmpty(String str) {
+        return str == null || str.isEmpty();
+    }
+}
+```
+
+---
+
+#### **2. 常量类**
+**场景**：类仅用于定义常量，不需要实例。  
+**示例**：系统配置参数、枚举常量集合。  
+**实现**：私有构造方法 + `final` 修饰类。  
+```java
+public final class AppConstants {
+    private AppConstants() {} // 防止实例化
+
+    public static final int MAX_RETRY = 3;
+    public static final String DEFAULT_ENCODING = "UTF-8";
+}
+```
+
+---
+
+#### **3. 抽象类（Abstract Class）**
+**场景**：类需要被继承，但自身不提供完整实现。  
+**示例**：框架中的基类（如 `AbstractList`）。  
+**实现**：通过 `abstract` 关键字声明抽象类。  
+```java
+public abstract class AbstractParser {
+    public abstract void parse(String input);
+}
+```
+
+---
+
+#### **4. 接口的默认方法伴随类**
+**场景**：接口的默认方法需要共享公共逻辑，但实现类不依赖实例状态。  
+**示例**：`java.util.stream.Collectors`（伴随 `Collector` 接口）。  
+**实现**：私有构造方法 + 静态方法。  
+```java
+public interface Collector<T, A, R> {
+    // 接口方法
+}
+
+public final class Collectors {
+    private Collectors() {} // 不可实例化
+
+    public static <T> Collector<T, ?, List<T>> toList() {
+        return new CollectorImpl<>(...);
+    }
+}
+```
+
+---
+
+#### **5. 单例模式（Singleton）**
+**场景**：全局只允许存在一个实例。  
+**示例**：数据库连接池、配置管理器。  
+**实现**：私有构造方法 + 静态实例。  
+```java
+public class DatabasePool {
+    private static final DatabasePool INSTANCE = new DatabasePool();
+
+    private DatabasePool() {} // 私有构造方法
+
+    public static DatabasePool getInstance() {
+        return INSTANCE;
+    }
+}
+```
+
+---
+
+#### **6. 防止反射/反序列化攻击**
+**场景**：防止通过反射或反序列化绕过构造方法限制。  
+**实现**：在私有构造方法中抛出异常。  
+```java
+public class SecurityUtils {
+    private SecurityUtils() {
+        // 防止通过反射实例化
+        throw new UnsupportedOperationException("不可实例化");
+    }
+}
+```
+
+---
+
+#### **关键实现方法**
+1. **私有构造方法**：阻止通过 `new` 关键字实例化。  
+2. **`final` 类**：防止子类化（可选）。  
+3. **抛出异常**：防御反射攻击。  
+
+---
+
+#### **总结**
+需要不可实例化的场景：  
+- 工具类/常量类：无需状态，直接通过类名调用方法。  
+- 抽象类/接口伴随类：设计上不需要实例。  
+- 单例模式：严格限制实例数量。  
+- 安全性需求：防止反射或反序列化攻击。  
+
+通过合理使用不可实例化设计，可以提升代码的**安全性**、**可维护性**和**表达清晰度**。

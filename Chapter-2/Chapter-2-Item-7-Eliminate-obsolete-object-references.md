@@ -10,7 +10,7 @@ Consider the following simple stack implementation:
 
 考虑以下简单的堆栈实现：
 
-```
+```java
 import java.util.Arrays;
 import java.util.EmptyStackException;
 

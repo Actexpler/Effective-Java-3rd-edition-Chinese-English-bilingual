@@ -6,7 +6,7 @@ The traditional way for a class to allow a client to obtain an instance is to pr
 
 客户端获得实例的传统方式是由类提供一个公共构造函数。还有一种技术应该成为每个程序员技能树的一部分。一个类可以提供公共静态工厂方法，它只是一个返回类实例的静态方法。下面是一个来自 Boolean （boolean 的包装类）的简单示例。该方法将 boolean 基本类型转换为 Boolean 对象的引用：
 
-```
+```java
 public static Boolean valueOf(boolean b) {
 	return b ? Boolean.TRUE : Boolean.FALSE;
 }
