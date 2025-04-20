@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "074648beaed0bca2",
+        "id": "7bc2f2bb8237d86c",
         "type": "tabs",
         "children": [
           {
-            "id": "74a4b2e4021ebebf",
+            "id": "45d22cd11226a99c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Chapter-10/Chapter-10-Item-69-Use-exceptions-only-for-exceptional-conditions.md",
+                "file": "Chapter-3/Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter-10-Item-69-Use-exceptions-only-for-exceptional-conditions"
+              "title": "Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals"
             }
           }
         ]
@@ -73,8 +73,19 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "7949682f43ffa7a0",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -142,16 +153,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chapter-2/Chapter-2-Item-6-Avoid-creating-unnecessary-objects.md",
+                "file": "Chapter-3/Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Chapter-2-Item-6-Avoid-creating-unnecessary-objects 的大纲"
+              "title": "Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -160,6 +172,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -168,12 +181,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "74a4b2e4021ebebf",
+  "active": "45d22cd11226a99c",
   "lastOpenFiles": [
-    "Chapter-10/Chapter-10-Introduction.md",
-    "目录.md",
+    "Chapter-3/Chapter-3-Item-14-Consider-implementing-Comparable.md",
+    "Chapter-3/Chapter-3-Item-13-Override-clone-judiciously.md",
+    "Chapter-3/Chapter-3-Item-12-Always-override-toString.md",
+    "Chapter-3/Chapter-3-Item-11-Always-override-hashCode-when-you-override-equals.md",
+    "Chapter-3/Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals.md",
     "Chapter-3/Chapter-3-Introduction.md",
+    "Chapter-2/Chapter-2-Item-4-Enforce-noninstantiability-with-a-private-constructor.md",
+    "目录.md",
+    "Chapter-2/Chapter-2-Item-3-Enforce-the-singleton-property-with-a-private-constructor-or-an-enum-type.md",
     "Chapter-2/Chapter-2-Item-9-Prefer-try-with-resources-to-try-finally.md",
+    "Chapter-10/Chapter-10-Item-69-Use-exceptions-only-for-exceptional-conditions.md",
+    "Chapter-10/Chapter-10-Introduction.md",
     "Chapter-2/Chapter-2-Item-8-Avoid-finalizers-and-cleaners.md",
     "Chapter-4/Chapter-4-Item-15-Minimize-the-accessibility-of-classes-and-members.md",
     "Chapter-2/Chapter-2-Item-7-Eliminate-obsolete-object-references.md",
@@ -181,12 +202,8 @@
     "Chapter-2/Chapter-2-Introduction.md",
     "Chapter-2/Chapter-2-Item-1-Consider-static-factory-methods-instead-of-constructors.md",
     "Chapter-2/Chapter-2-Item-2-Consider-a-builder-when-faced-with-many-constructor-parameters.md",
-    "Chapter-2/Chapter-2-Item-3-Enforce-the-singleton-property-with-a-private-constructor-or-an-enum-type.md",
-    "Chapter-2/Chapter-2-Item-4-Enforce-noninstantiability-with-a-private-constructor.md",
     "Chapter-2/Chapter-2-Item-5-Prefer-dependency-injection-to-hardwiring-resources.md",
-    "Chapter-3/Chapter-3-Item-14-Consider-implementing-Comparable.md",
     "Chapter-4/Chapter-4-Item-20-Prefer-interfaces-to-abstract-classes.md",
-    "Chapter-4/Chapter-4-Item-16-In-public-classes-use-accessor-methods-not-public-fields.md",
-    "Chapter-3/Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals.md"
+    "Chapter-4/Chapter-4-Item-16-In-public-classes-use-accessor-methods-not-public-fields.md"
   ]
 }

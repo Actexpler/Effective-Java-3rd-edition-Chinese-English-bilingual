@@ -43,5 +43,10 @@
   "Chapter-2/Chapter-2-Item-9-Prefer-try-with-resources-to-try-finally.md": "🍁",
   "Chapter-3/Chapter-3-Introduction.md": "🍁",
   "Chapter-10/Chapter-10-Item-69-Use-exceptions-only-for-exceptional-conditions.md": "🍁",
-  "Chapter-10/Chapter-10-Introduction.md": "🍁"
+  "Chapter-10/Chapter-10-Introduction.md": "🍁",
+  "Chapter-3/Chapter-3-Item-10-Obey-the-general-contract-when-overriding-equals.md": "🍁",
+  "Chapter-3/Chapter-3-Item-11-Always-override-hashCode-when-you-override-equals.md": "🍁",
+  "Chapter-3/Chapter-3-Item-12-Always-override-toString.md": "🍁",
+  "Chapter-3/Chapter-3-Item-13-Override-clone-judiciously.md": "🍁",
+  "Chapter-3/Chapter-3-Item-14-Consider-implementing-Comparable.md": "🍁"
 }
